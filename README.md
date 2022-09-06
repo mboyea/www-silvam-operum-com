@@ -1,21 +1,16 @@
-TS & Solid Application Template
+Silvam Operum
 ===
-A template to build web applications with TypeScript, Solid, & Sass
+A web application which combines your calendar, journal, and task management solution into one place.
 ---
-This is a template for building a scalable single-page application using [Solid]. To keep things simple and expandable, this template doesn't rely upon any unnecessary dependencies. Whether you're creating a small tool or beginning a large project, this is a strong place to begin.
+This application is built with TypeScript, Solid, & Sass. It uses Yarn as a package manager and Babel & Webpack to compile local builds.
 
-This template uses Babel & Webpack to compile the project.
-
-To reference a project built using this template, see [this   application](https://github.com/YourZombieMop/totally-tubular-task-table).
-
-### To use this template
-* [Install Yarn]
-* Fork this repository & rename it to your project's name.
-* Clone the forked repository to your computer.
-* Open a terminal in the root directory of the cloned repository.
+### To install this locally
+* [Install Yarn] (it is recommended that you [install Node] to do this)
+* Clone this repository to your computer.
+* Open a terminal in the root directory of this repository.
 * Run `yarn install` in the terminal.
 
-From here, you're ready to devlelop your project.
+From here, you're ready to use the application. Run `yarn run start:prod` in the terminal & navigate to [localhost:1111](http://localhost:1111) in a web browser.
 
 ### Scripts
 To run a script, type `yarn run <script-name>`
@@ -31,8 +26,9 @@ To run a script, type `yarn run <script-name>`
 
 To edit commands, see "scripts" in package.json
 
-### To contribute to this template
-Unfortunately, this template doesn't support user contributions right now.
+### To contribute to this project
+Unfortunately, this project doesn't support user contributions right now.
 
+[install Node]: https://nodejs.org/en/download/
 [Install Yarn]: https://yarnpkg.com/getting-started/install
 [Solid]: https://www.solidjs.com/
