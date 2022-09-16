@@ -1,9 +1,9 @@
 import { Component } from 'solid-js';
+import Routes from '../Routes/Routes'
 import './App.sass'
 
 const App: Component = () => {
-	// TODO: add Routes component and insert it here
-	return <h1>Application</h1>;
+	return <Routes />;
 }
 
 export default App;
