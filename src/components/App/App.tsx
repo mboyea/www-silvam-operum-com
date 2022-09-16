@@ -1,6 +1,6 @@
 import { Component } from 'solid-js';
+// TODO: simplify include statements to ../Routes
 import Routes from '../Routes/Routes'
-import './App.sass'
 
 const App: Component = () => {
 	return <Routes />;
