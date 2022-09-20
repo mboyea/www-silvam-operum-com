@@ -1,9 +1,9 @@
 import { Component } from 'solid-js';
 // TODO: simplify include statements to ../Routes
-import Routes from '../Routes/Routes'
+import AppRoutes from '../Routes/Routes'
 
 const App: Component = () => {
-	return <Routes />;
+	return <AppRoutes />;
 }
 
 export default App;
