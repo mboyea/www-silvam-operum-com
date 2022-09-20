@@ -9,14 +9,15 @@ module.exports = {
     // output of project is at path 'ROOT/bin/'
     path: path.resolve(__dirname, '..', './bin/'),
     filename: 'bundle.js',
+		publicPath: '/',
   },
+	devServer: {
+		// undefined routes call index.html, allowing for client-side Router
+		historyApiFallback: true,
+	},
   plugins: [
     // template for project is at path 'ROOT/src/index.html'
     new HtmlWebpackPlugin({template: path.resolve(__dirname, '..', './src/index.html')}),
-    new webpack.DefinePlugin({
-      // ? add env variables
-      // ? 'process.env.VAR_NAME': JSON.stringifyify('VAR_VALUE'),
-    }),
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
