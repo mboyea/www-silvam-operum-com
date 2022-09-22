@@ -1,6 +1,5 @@
 import { Component } from 'solid-js';
-// TODO: implement proper navbar
-import Navbar from '../Header'
+import Navbar from '../Navbar'
 
 const Footer: Component = () => {
 	return (
