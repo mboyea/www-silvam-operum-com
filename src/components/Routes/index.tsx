@@ -6,9 +6,9 @@ const AppRoutes: Component = () => {
 		<Routes>
 			// TODO: implement pages
 			<Route path="/" element={<></>} />
-			<Route path="/calendar" element={<></>} />
 			<Route path="/tasks" element={<></>} />
-			<Route path="/routines" element={<></>} />
+			<Route path="/calendar" element={<></>} />
+			// ? <Route path="/routines" element={<></>} />
 		</Routes>
 	);
 }
