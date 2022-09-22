@@ -20,11 +20,8 @@ module.exports = {
     new HtmlWebpackPlugin({template: path.resolve(__dirname, '..', './src/index.html')}),
   ],
   resolve: {
+		mainFiles: ['index'],
     extensions: ['.tsx', '.ts', '.js'],
-		alias: {
-			components: path.resolve(__dirname, 'src/components/'),
-			types: path.resolve(__dirname, 'src/types/'),
-		}
   },
   module: {
     rules: [
