@@ -2,6 +2,8 @@ Silvam Operum
 ===
 A web application which combines your calendar, journal, and task management solution into one place.
 ---
+A simple, powerful digital planner.
+
 This application is built with TypeScript, Solid, & Sass. It uses Yarn as a package manager and Babel & Webpack to compile local builds.
 
 ### To install this locally
