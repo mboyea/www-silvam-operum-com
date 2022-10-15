@@ -1,5 +1,5 @@
 import { Component } from 'solid-js';
-import Navbar from '../Navbar'
+import Navbar from './Navbar'
 
 const Footer: Component = () => {
 	return (

@@ -1,8 +1,8 @@
 import { Component } from 'solid-js';
 import { Routes, Route } from '@solidjs/router';
-import ViewHome from '../ViewHome';
-import ViewTasks from '../ViewTasks';
-import ViewCalendar from '../ViewCalendar';
+import ViewHome from './ViewHome';
+import ViewTasks from './ViewTasks';
+import ViewCalendar from './ViewCalendar';
 
 const AppRoutes: Component = () => {
 	return (
