@@ -1,16 +1,22 @@
-import { Component, JSX, createContext, createSignal, useContext } from "solid-js";
+import { Component, JSX, createContext, useContext } from "solid-js";
+import { createStore } from "solid-js/store";
 import Task from "../types/Task";
 
-export const TaskContext = createContext();
+export interface TaskContextModel {
+	tasks: Task[];
+	addTask: () => void;
+}
+
+export const TaskContext = createContext<TaskContextModel>();
 
 export const TaskProvider: Component<{
 	children?: JSX.Element,
 }> = (props) => {
-	const [tasks, setTasks] = createSignal<Task[]>([]);
-	const store = [
+	const [tasks, setTasks] = createStore<Task[]>([]);
+	const store = {
 		tasks,
-		setTasks
-	];
+		addTask: () => {},
+	};
 	return (
 		<TaskContext.Provider value={store}>
 			{props.children}
