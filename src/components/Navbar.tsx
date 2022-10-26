@@ -1,12 +1,12 @@
 import { Component } from 'solid-js';
-import { NavLink } from '@solidjs/router';
+import { A } from '@solidjs/router';
 
 const Navbar: Component = () => {
 	return (
 		<nav aria-label='App Main Menu'>
 			<ul>
-				<li><NavLink href='/tasks'>Tasks</NavLink></li>
-				<li><NavLink href='/calendar'>Clndr</NavLink></li>
+				<li><A href='/tasks'>Tasks</A></li>
+				<li><A href='/calendar'>Clndr</A></li>
 			</ul>
 		</nav>
 	);
