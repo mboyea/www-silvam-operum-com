@@ -3,8 +3,10 @@ import { createStore } from "solid-js/store";
 import Task from "../types/Task";
 
 export interface TaskContextModel {
-	tasks: Task[];
-	addTask: () => void;
+	get: Task[];
+	set: (tasks: Task[]) => void;
+	add: (task: Task) => void;
+	delete: (task: Task) => void;
 }
 
 export const TaskContext = createContext<TaskContextModel>();
@@ -13,9 +15,11 @@ export const TaskProvider: Component<{
 	children?: JSX.Element,
 }> = (props) => {
 	const [tasks, setTasks] = createStore<Task[]>([]);
-	const store = {
-		tasks,
-		addTask: () => {},
+	const store: TaskContextModel = {
+		get: tasks,
+		set: setTasks,
+		add: (task: Task) => {},
+		delete: (task: Task) => {},
 	};
 	return (
 		<TaskContext.Provider value={store}>

@@ -4,8 +4,9 @@ import { useTasks } from '../hooks/TaskProvider';
 
 const ViewTasks: Component = () => {
 	const tasks = useTasks();
+	// TODO: handle undefined case (loading...)
 	return (
-		<TaskList tasks={tasks?.tasks} />
+		<TaskList tasks={tasks?.get} />
 	);
 }
 
