@@ -5,6 +5,7 @@ import ViewTasks from './ViewTasks';
 import ViewCalendar from './ViewCalendar';
 
 const AppRoutes: Component = () => {
+	// TODO: enable viewing /tasks/{id} with TaskDialogue
 	return (
 		<Routes>
 			<Route path="/" component={ViewHome} />
