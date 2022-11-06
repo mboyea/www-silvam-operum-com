@@ -9,9 +9,9 @@ const AppRoutes: Component = () => {
 	return (
 		<Routes>
 			<Route path="/" component={ViewHome} />
-			<Route path="/tasks" component={ViewTasks} />
-			<Route path="/calendar" component={ViewCalendar} />
-			// ? <Route path="/routines" />
+			<Route path="/:user/tasks/:task?" component={ViewTasks} />
+			<Route path="/:user/calendar" component={ViewCalendar} />
+			// ? <Route path=":user/routines" />
 		</Routes>
 	);
 }

@@ -12,9 +12,10 @@ export interface TaskContextModel {
 export const TaskContext = createContext<TaskContextModel>();
 
 export const TaskProvider: Component<{
+	value: Task[],
 	children?: JSX.Element,
 }> = (props) => {
-	const [tasks, setTasks] = createStore<Task[]>([]);
+	const [tasks, setTasks] = createStore<Task[]>(props.value);
 	const store: TaskContextModel = {
 		get: tasks,
 		set: setTasks,
