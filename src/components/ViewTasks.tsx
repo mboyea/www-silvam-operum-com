@@ -10,6 +10,7 @@ const ViewTasks: Component = () => {
 	const user = useUser();
 	const tasks = useTasks();
 
+	// TODO: make this async
 	// if user in URL is different than the active user
 	if (user?.getActive() !== urlParams.user) {
 		// update active user

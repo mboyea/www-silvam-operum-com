@@ -8,9 +8,9 @@ render(
 	() => (
 		<UserProvider value={[]}>
 			<TaskProvider value={[]}>
-					<Router>
-						<App />
-					</Router>
+				<Router>
+					<App />
+				</Router>
 			</TaskProvider>
 		</UserProvider>
 	),

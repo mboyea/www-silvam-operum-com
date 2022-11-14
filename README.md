@@ -29,19 +29,18 @@ To run a script, type `yarn run <script-name>`
 To edit commands, see "scripts" in package.json
 
 ### Current Term Goals
-> Task & Calendar interface
-> Journaling system
-> Push notifications
-> Full management of recurring tasks
+> Task & Calendar interface  
+> Journaling system  
+> Full management of recurring tasks  
 
 ### Long Term Goals
-> Task scheduling (once every x amount of time, this task should be done)
-> Task commitment tracking (track history of meeting scheduling commitments)
-> Task suggestion (based upon category, suggest tasks that are scheduled)
-> Routines (an entire day, week, or month that may autofill tasks & categories for a day) - but do routines emerge naturally from the above task management solution?
-> Google Calendar integration
-> Microsoft Outlook integration
-> Alarm notifications
+> Task scheduling (once every x amount of time, this task should be done)  
+> Task commitment tracking (track history of meeting scheduling commitments)  
+> Task suggestion (based upon category, suggest tasks that are scheduled)  
+> Routines (an entire day, week, or month that may autofill tasks & categories for a day) - but do routines emerge naturally from the above task management solution?  
+> Google Calendar integration  
+> Microsoft Outlook integration  
+> Push notifications  (email, phone notification, alarm)  
 
 ### To contribute to this project
 Unfortunately, this project doesn't support user contributions right now.

@@ -1,7 +1,7 @@
 {
   "name": "ts-solid-template",
   "version": "0.0.0",
-  "description": "A template to build web applications with TypeScript, Solid, & Sass",
+  "description": "A digital planner",
   "license": "MIT",
   "scripts": {
     "build": "yarn run build:dev",
