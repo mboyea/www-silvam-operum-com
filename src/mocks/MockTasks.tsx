@@ -8,6 +8,13 @@ const mockTasks: Task[] = [
 		instances: [],
 		recurrances: [],
 	},
+	{
+		title: 'title1',
+		description: 'description1',
+		category: 'category1',
+		instances: [],
+		recurrances: [],
+	},
 ]
 
 export default mockTasks;
