@@ -10,12 +10,12 @@ const ViewTasks: Component = () => {
 	const user = useUser();
 	const tasks = useTasks();
 
-	// if user in URL is different, update user & reload tasks
-	if (urlParams.user !== user?.get.uid) {
-		user?.set({
-			uid: urlParams.user,
-		})
-		tasks?.set(getTasksByUserUID(user?.get.uid as string));
+	// if user in URL is different than the active user
+	if (user?.getActive() !== urlParams.user) {
+		// update active user
+		user?.setActive(urlParams.user);
+		// update tasks
+		tasks?.set(getTasksByUserUID(user?.getActive() as string));
 	}
 
 	return (tasks === undefined) ? (

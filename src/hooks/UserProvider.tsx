@@ -1,22 +1,27 @@
-import { Component, JSX, createContext, useContext } from "solid-js";
+import { Component, JSX, createContext, useContext, createSignal } from "solid-js";
 import { createStore } from "solid-js/store";
 import User from "../types/User";
 
 export interface UserContextModel {
-	get: User;
-	set: (user: User) => void;
+	get: User[];
+	set: (users: User[]) => void;
+	getActive: () => string;
+	setActive: (userUID: string) => void;
 }
 
 export const UserContext = createContext<UserContextModel>();
 
 export const UserProvider: Component<{
-	value: User,
+	value: User[],
 	children?: JSX.Element,
 }> = (props) => {
-	const [user, setUser] = createStore<User>(props.value);
+	const [users, setUsers] = createStore<User[]>(props.value);
+	const [activeUser, setActiveUser] = createSignal<string>('');
 	const store: UserContextModel = {
-		get: user,
-		set: setUser,
+		get: users,
+		set: setUsers,
+		getActive: activeUser,
+		setActive: setActiveUser,
 	};
 	return (
 		<UserContext.Provider value={store}>

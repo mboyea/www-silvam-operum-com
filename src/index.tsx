@@ -6,13 +6,13 @@ import { UserProvider } from './hooks/UserProvider';
 
 render(
 	() => (
-		<TaskProvider value={[]}>
-			<UserProvider value={{uid: ''}}>
-				<Router>
-					<App />
-				</Router>
-			</UserProvider>
-		</TaskProvider>
+		<UserProvider value={[]}>
+			<TaskProvider value={[]}>
+					<Router>
+						<App />
+					</Router>
+			</TaskProvider>
+		</UserProvider>
 	),
 	document.getElementById('root') as HTMLElement
 );
