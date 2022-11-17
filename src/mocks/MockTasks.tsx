@@ -2,6 +2,13 @@ import Task from "../types/Task";
 
 const mockTasks: Task[] = [
 	{
+		title: 'Uh oh!',
+		description: 'Something went wrong. Please reload the app.',
+		category: 'category',
+		instances: [],
+		recurrances: [],
+	},
+	{
 		title: 'title',
 		description: 'description',
 		category: 'category',
