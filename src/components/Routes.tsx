@@ -6,12 +6,10 @@ import ViewCalendar from './ViewCalendar';
 import View404 from './View404';
 
 const AppRoutes: Component = () => {
-	// TODO: enable viewing /tasks/{id} with TaskView
 	return (
 		<Routes>
 			<Route path='/' component={ViewHome} />
 			<Route path='/:user/tasks' component={ViewTasks} />
-			<Route path='/:user/tasks/:task' />
 			<Route path='/:user/calendar' component={ViewCalendar} />
 			// ? <Route path=":user/routines" />
 			<Route path='*' component={View404} />
