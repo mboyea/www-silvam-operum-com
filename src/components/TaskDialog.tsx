@@ -13,6 +13,7 @@ const TaskDialog: Component<{
 				<div class='dialogue-container'>
 					<button onClick={() => props.handleClose(props.task)}>Close</button>
 					<h2>{props.task.title}</h2>
+					<p>{props.task.description}</p>
 				</div>
 			</Portal>
 		</Show>

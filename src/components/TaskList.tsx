@@ -31,7 +31,6 @@ const TaskList: Component<{
 					<li>
 						<button onClick={() => handleTaskOpen(task)}>
 							<h3>{task.title}</h3>
-							<p>{task.description}</p>
 						</button>
 					</li>
 				))}
