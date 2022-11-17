@@ -1,4 +1,4 @@
-import { Component } from 'solid-js';
+import { Component, Show } from 'solid-js';
 import { useParams } from '@solidjs/router';
 import { useTasks } from '../hooks/TaskProvider';
 import { useUser } from '../hooks/UserProvider';
@@ -19,10 +19,14 @@ const ViewTasks: Component = () => {
 		tasks?.set(getTasksByUserUID(user?.getActive() as string));
 	}
 
-	return (tasks === undefined) ? (
-		<p>loading...</p>
-	) : (
-		<TaskList tasks={tasks?.get} />
+	return (
+		(tasks === undefined) ? (
+			<p>
+				undefined//TODO: Error: Task context cannot be resolved.
+			</p>
+		) : (
+			<TaskList tasks={tasks?.get} />
+		)
 	);
 }
 

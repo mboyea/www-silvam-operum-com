@@ -1,21 +1,35 @@
 import { Component, createSignal, Show } from 'solid-js';
 import Task from '../types/Task';
-import TaskDialogue from './TaskDialogue';
+import TaskDialog from './TaskDialog';
+import mockTasks from '../mocks/MockTasks';
 
 const TaskList: Component<{
 	tasks: Task[],
 }> = (props) => {
-	const [activeTask, setActiveTask] = createSignal<Task>();
-	// TODO make a delete task button
+	const [activeTask, setActiveTask] = createSignal<Task>(mockTasks[0]);
+	const [taskOpen, setTaskOpen] = createSignal<boolean>(false);
 
-	// TODO: fix reactivity of TaskDialogue
+	const handleTaskOpen = (task: Task) => {
+		setActiveTask(task);
+		setTaskOpen(true);
+	}
+
+	const handleTaskClose = (task: Task) => {
+		setTaskOpen(false);
+	}
+
+	// TODO make a delete task button
 	return (
 		<>
-			<TaskDialogue task={activeTask()} />
+			<TaskDialog
+				task={activeTask()}
+				isOpen={taskOpen()}
+				handleClose={handleTaskClose}
+			/>
 			<ul>
 				{props.tasks.map((task) => (
 					<li>
-						<button onClick={(e) => setActiveTask(task)}>
+						<button onClick={() => handleTaskOpen(task)}>
 							<h3>{task.title}</h3>
 							<p>{task.description}</p>
 						</button>
