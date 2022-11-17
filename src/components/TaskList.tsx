@@ -18,7 +18,6 @@ const TaskList: Component<{
 		setTaskOpen(false);
 	}
 
-	// TODO make a delete task button
 	return (
 		<>
 			<TaskDialog
