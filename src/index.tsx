@@ -14,5 +14,5 @@ render(
 			</TaskProvider>
 		</UserProvider>
 	),
-	document.getElementById('root') as HTMLElement
+	document.getElementById('app-root') as HTMLElement
 );
