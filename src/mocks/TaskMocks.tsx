@@ -1,6 +1,6 @@
 import Task from "../types/Task";
 
-const mockTasks: Task[] = [
+const taskMocks: Task[] = [
 	{
 		uid: 0,
 		title: 'Uh oh!',
@@ -27,4 +27,4 @@ const mockTasks: Task[] = [
 	},
 ]
 
-export default mockTasks;
+export default taskMocks;

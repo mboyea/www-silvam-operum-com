@@ -1,7 +1,7 @@
 import Task from "../types/Task";
-import mockTasks from '../mocks/MockTasks'
+import taskMocks from '../mocks/TaskMocks'
 
 export const getTasksByUserUID = (user: string): Task[] => {
 	// TODO: call API (axios?) to get user tasks from database
-	return mockTasks;
+	return taskMocks;
 }

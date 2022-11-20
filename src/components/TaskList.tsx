@@ -1,12 +1,12 @@
 import { Component, createSignal, Show } from 'solid-js';
 import Task from '../types/Task';
 import TaskDialog from './TaskDialog';
-import mockTasks from '../mocks/MockTasks';
+import taskMocks from '../mocks/TaskMocks';
 
 const TaskList: Component<{
 	tasks: Task[],
 }> = (props) => {
-	const [activeTask, setActiveTask] = createSignal<Task>(mockTasks[0]);
+	const [activeTask, setActiveTask] = createSignal<Task>(taskMocks[0]);
 	const [taskOpen, setTaskOpen] = createSignal<boolean>(false);
 
 	const onOpenTask = (task: Task) => () => {
