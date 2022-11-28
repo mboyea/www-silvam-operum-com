@@ -6,6 +6,7 @@ export interface TaskContextModel {
 	get: Task[];
 	set: (tasks: Task[]) => void;
 	add: (task: Task) => void;
+	update: (task: Task) => void;
 	delete: (task: Task) => void;
 }
 
@@ -20,6 +21,7 @@ export const TaskProvider: Component<{
 		get: tasks,
 		set: setTasks,
 		add: (task: Task) => {},
+		update: (task: Task) => {},
 		delete: (task: Task) => {},
 	};
 	return (

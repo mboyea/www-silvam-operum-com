@@ -3,8 +3,6 @@ import { createStore } from 'solid-js/store';
 import { Portal } from 'solid-js/web';
 import Task from '../types/Task';
 
-// TODO: make tasks editable using HTML Forms
-
 const TaskDialog: Component<{
 	task: Task,
 	isOpen: boolean,
