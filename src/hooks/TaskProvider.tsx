@@ -21,7 +21,12 @@ export const TaskProvider: Component<{
 		get: tasks,
 		set: setTasks,
 		add: (task: Task) => {},
-		update: (task: Task) => {},
+		update: (task: Task) => {
+			setTasks([
+				...tasks.filter((t) => t.uid !== task.uid),
+				task
+			]);
+		},
 		delete: (task: Task) => {},
 	};
 	return (
