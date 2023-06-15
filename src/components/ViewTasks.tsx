@@ -40,10 +40,6 @@ const ViewTasks: Component = () => {
 		// TODO: implement task deleting
 		onCloseTask(task)();
 	};
-	const onDuplicateTask = (task: Task) => () => {
-		// TODO: implement task duplicating
-		onCloseTask(task)();
-	};
 
 	// TODO: add search bar
 	// TODO: add filter controls
@@ -65,7 +61,6 @@ const ViewTasks: Component = () => {
 					onClose={onCloseTask}
 					onSave={onSaveTask}
 					onDelete={onDeleteTask}
-					onDuplicate={onDuplicateTask}
 				/>
 			</>
 		)

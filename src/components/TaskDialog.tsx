@@ -9,7 +9,6 @@ const TaskDialog: Component<{
 	onClose: (task: Task) => (e: Event) => void,
 	onSave: (task: Task) => (e: Event) => void,
 	onDelete: (task: Task) => (e: Event) => void,
-	onDuplicate: (task: Task) => (e: Event) => void,
 }> = (props) => {
 	const [task, setTask] = createStore<Task>(props.task);
 
@@ -18,10 +17,9 @@ const TaskDialog: Component<{
 			<Portal mount={document.getElementById('modal-root') as HTMLElement}>
 				<form onSubmit={props.onSave(task)}>
 					<header class='featured-img' style={'background-image: url(' + 'banner.png' + ');'}>
-						<button class='float-left' onClick={props.onClose(task)}>Close</button>
-						<button class='float-right' onClick={props.onDelete(task)}>Delete</button>
-						<button class='float-right' onClick={props.onDuplicate(task)}>Duplicate</button>
-						<input class='float-right' type='submit' value={'Save'}/>
+						<button class='float-left' onClick={props.onClose(task)}>❌</button>
+						<button class='float-right' onClick={props.onDelete(task)}>🗑️</button>
+						<input class='float-right' type='submit' value={'💾'}/>
 					</header>
 					<h2>
 						<input
