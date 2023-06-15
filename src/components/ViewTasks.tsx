@@ -2,7 +2,7 @@ import { Component, createSignal } from 'solid-js';
 import { useParams } from '@solidjs/router';
 import { useTasks } from '../hooks/TaskProvider';
 import { useUser } from '../hooks/UserProvider';
-import { getTasks } from '../api/TaskRequests';
+import { getTasks, saveTask } from '../api/TaskRequests';
 import Task from "../types/Task";
 import taskMocks from '../mocks/TaskMocks';
 import TaskDialog from './TaskDialog';
@@ -13,7 +13,7 @@ const ViewTasks: Component = () => {
 	const user = useUser();
 	const tasks = useTasks();
 
-	// TODO: make this async
+	// TODO: make this async to allow for loading screen
 	// if user in URL is different than the active user
 	if (user?.getActive() !== urlParams.user) {
 		// update active user
@@ -33,8 +33,9 @@ const ViewTasks: Component = () => {
 		setTaskOpen(false);
 	}
 	const onSaveTask = (task: Task) => () => {
-		// TODO: implement task saving
-		onCloseTask(task)();
+		// TODO: make this api call async to then trigger 'task saved' popup on completion
+		saveTask(task, activeTask());
+		tasks?.update(task);
 	};
 	const onDeleteTask = (task: Task) => () => {
 		// TODO: implement task deleting
