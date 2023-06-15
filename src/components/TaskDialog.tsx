@@ -11,6 +11,7 @@ const TaskDialog: Component<{
 	onDelete: (task: Task) => (e: Event) => void,
 }> = (props) => {
 	const [task, setTask] = createStore<Task>(props.task);
+	// TEST
 
 	return (
 		<Show when={props.isOpen === true}>
